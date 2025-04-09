@@ -1,18 +1,28 @@
-<style>
-    #container{
-        display: flex;
-        justify-content: center;
-    }
-    canvas{
-        position: absolute;
-    }
-</style>
-
-<canvas id="canvas"></canvas>
-
-<div id="container">
-    <video id="video-feed" height="560" width="720" autoplay></video>
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Face Recognition</title>
+</head>
+<h1>Face Recognition</h1>
+<div id="results">
+    <canvas id="canvas"></canvas>
+    <div id="container">
+        <video id="video-feed" height="560" width="720" autoplay></video>
+    </div>
 </div>
+
+
+
+<div id="info">
+    <!-- File input for image upload -->
+    <div class="file-upload">
+        <label for="image-upload" class="custom-file-label">Upload Person Image</label>
+        <input type="file" id="image-upload" accept="image/*" />
+      </div>
+<!-- Input for the name of the person -->
+<input type="text" id="person-name" placeholder="Enter person's name" />
+
+</div>
+
 
 <script src="./face-api.min.js"></script>
 <script src="./scripts.js"></script>
