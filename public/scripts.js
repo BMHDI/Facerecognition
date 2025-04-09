@@ -64,9 +64,9 @@ const run = async () => {
   
             // Ensure faceMatcher is initialized before accessing
             if (faceMatcher) {
-                let personName = document.getElementById('person-name').value;
+                // let personName = document.getElementById('person-name').value;
                 let label = faceMatcher.findBestMatch(descriptor).toString();
-                let options = { label:`${personName} ${Math.round(score * 100) }%` };
+                let options = { label:` This person is you  ${Math.round(score * 100) }%` };
                 if (label.includes("unknown")) {
                     options = { label: "Unknown..." };
                 }
